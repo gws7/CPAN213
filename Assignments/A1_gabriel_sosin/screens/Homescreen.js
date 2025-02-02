@@ -23,6 +23,12 @@ const HomeScreen = () => {
             } else {
                 Alert.alert(`BMI: ${newBmi.toFixed(1)}\nYou are obese`);
             }
+        } else if (!weight && height > 0 && height <= 3) {
+            Alert.alert("Weight must be entered in order to calculate BMI");
+        } else if ((!height || height > 3 ) && weight > 0){
+            Alert.alert("Height must be entered and be less than 3")
+        } else if (height > 3){
+            Alert.alert("Height must be less than 3")
         } else {
             Alert.alert("Invalid Inputs, please try again");
         }

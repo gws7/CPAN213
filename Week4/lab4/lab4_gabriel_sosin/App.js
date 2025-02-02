@@ -125,7 +125,6 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.2,
     shadowRadius: 3,
     elevation: 2, 
-    flexDirection: 'column',
     alignItems: 'center',
   },
   companyLogo: {
@@ -134,11 +133,6 @@ const styles = StyleSheet.create({
     borderRadius: 10, 
     marginBottom: 10,
     resizeMode: 'contain', 
-  },
-  noLogoText: {
-    fontSize: 12,
-    color: '#7F8C8D',
-    marginBottom: 10,
   },
   jobTitle: {
     fontSize: 18,
