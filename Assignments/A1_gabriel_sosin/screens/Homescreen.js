@@ -53,7 +53,7 @@ const HomeScreen = () => {
                 source={{ uri: 'https://cdn-icons-png.flaticon.com/512/10476/10476452.png' }}
                 style={a1Styles.image}
             />
-
+ 
             <Text style={a1Styles.label}>Weight:</Text>
             <TextInput
                 style={a1Styles.input}
