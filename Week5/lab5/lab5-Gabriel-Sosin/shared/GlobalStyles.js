@@ -85,7 +85,7 @@ const globalStyles = StyleSheet.create({
     },
     footerInfo: {
         fontStyle: "italic",
-        textAlign: "center"
+        textAlign: "center" 
     }
 });
 

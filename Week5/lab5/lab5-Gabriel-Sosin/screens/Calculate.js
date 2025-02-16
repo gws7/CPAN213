@@ -42,7 +42,7 @@ const Calculate = ({route, navigation}) => {
 
             <View style={GlobalStyles.subContainer}>
                 <Text>Proceed to see your final receipt</Text>
-            </View>
+            </View> 
 
             <View style={GlobalStyles.subContainerProceed}>
                 <TouchableOpacity onPress={ () => Proceed()}>

@@ -38,7 +38,7 @@ const QuantityInput = ({ navigation }) => {
 
             <View style={{flexDirection: 'row', alignItems: 'center', marginTop: "5%", width: "80%", alignSelf: "center"}}>
                 <View style={{flex: 1, height: 3, backgroundColor: "green", marginTop:15}} />     
-            </View>
+            </View> 
 
             <View style={GlobalStyles.subContainer}>
                 <TouchableOpacity onPress={calculate}>
