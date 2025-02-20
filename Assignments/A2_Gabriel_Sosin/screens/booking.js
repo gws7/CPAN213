@@ -10,12 +10,14 @@ const Booking = ({route}) => {
     const roomSelected = roomData.find((entry) => entry.roomNumber === room)
 
     const capacityCheck = numOfPeople <= roomSelected.capacity
+    const availabilityCheck = roomSelected.available
+    const isBookingAllowed = availabilityCheck && capacityCheck;
 
     return(
         <View>
             <Text style={a2Style.bookingTextTitle}>Room Information</Text>
 
-            {capacityCheck ? (
+            {isBookingAllowed ? (
                 <View style={a2Style.inputStyle}>
                     <Text style={a2Style.bookingFieldAccept}>
                         The Room Is Available

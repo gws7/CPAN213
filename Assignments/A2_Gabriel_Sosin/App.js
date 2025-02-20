@@ -9,7 +9,7 @@ import Dashboard from './screens/dashboard';
 import Booking from './screens/booking';
 
 const Stack = createNativeStackNavigator()
-
+ 
 export default function App() {
 
   const headerOptionsWithLogout = ({navigation}) => (
