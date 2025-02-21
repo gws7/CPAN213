@@ -29,6 +29,11 @@ export default function App() {
 
             <StatusBar style="auto" />
             <Text style={styles.appTitleText}>Character Counter</Text>
+
+            <View style={styles.iconContainer}>
+                <MaterialCommunityIcons name="text-account" size={60} color="mediumblue" />
+            </View>
+
             <View style={styles.inputArea}>
               <TextInput
                 editable
@@ -45,15 +50,13 @@ export default function App() {
             </View>
 
             {/* Ignore this I was debugging
-          <Text>{progress}</Text> */}
+            <Text>{progress}</Text> */}
 
             <View style={styles.progressArea}>
 
               <Progress.Bar width={200} height={10} progress={progress} thickness={15} color={barFull()} unfilledColor="lightcyan" borderRadius={5}></Progress.Bar>
 
-              <View style={styles.iconContainer}>
-                <MaterialCommunityIcons name="text-account" size={60} color="mediumblue" />
-              </View>
+              <Progress.Pie size={50} progress={progress} thickness={15} color={barFull()} unfilledColor='lightcyan'></Progress.Pie>
 
             </View>
 
@@ -113,7 +116,13 @@ const styles = StyleSheet.create({
 
   },
   progressArea: {
-    alignSelf: "center"
+    alignSelf: "center",
+    marginTop: 10,
+    marginBottom: 10,
+    gap: 15,
+    justifyContent: "center",
+    alignItems: "center",
+    width: "80%",
   },
   horizontalLine: {
     borderBottomColor: 'blue',
