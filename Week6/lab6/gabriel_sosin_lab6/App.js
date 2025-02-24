@@ -43,7 +43,6 @@ export default function App() {
                 placeholder='Type out something'
                 placeholderTextColor={"blue"}
                 onChangeText={text => {
-
                   setProgress(text.length / 100);
                 }}
               />

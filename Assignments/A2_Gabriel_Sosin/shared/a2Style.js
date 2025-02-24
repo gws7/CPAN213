@@ -10,7 +10,7 @@ const a2Style = StyleSheet.create({
         fontSize: 20,
     },
     inputStyle: {
-        padding: 5,
+        padding: 5, 
         marginBottom: 20,
         borderWidth: 3,
         borderRadius: 20,
