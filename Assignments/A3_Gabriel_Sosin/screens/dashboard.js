@@ -17,24 +17,34 @@ const Dashboard = ({navigation, route}) => {
 
     const submitSelection = () => {
         if (studentId == "" || name == "" || numOfPeople == 0 || room == "") {
-            Alert.alert("Invalid Input, please enter the correct information")
-        } else {
-            const bookingData = {
-                studentId,
-                name,
-                numOfPeople: parseInt(numOfPeople),
-                roomNumber: room
-            };
-            
-            dispatch(addBooking(bookingData));
-
-            navigation.navigate("Booking", {
-                studentId, 
-                name, 
-                numOfPeople, 
-                room
-            });
+            Alert.alert("Invalid Input", "Please enter the correct information")
+            return;
         }
+
+        const selectedRoom = roomData.find(rooms => rooms.roomNumber === room);
+        
+        if (!selectedRoom.available || parseInt(numOfPeople) > selectedRoom.capacity) {
+            Alert.alert("Room Unavailable", 
+                `This room is either unavailable or cannot accommodate ${numOfPeople} people. Maximum capacity is ${selectedRoom.capacity}.`
+            );
+            return;
+        }
+
+        const bookingData = {
+            studentId,
+            name,
+            numOfPeople: parseInt(numOfPeople),
+            roomNumber: room
+        };
+        
+        dispatch(addBooking(bookingData));
+
+        navigation.navigate("Booking", {
+            studentId, 
+            name, 
+            numOfPeople, 
+            room
+        });
     }
 
     return(
